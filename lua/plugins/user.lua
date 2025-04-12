@@ -7,14 +7,19 @@
 ---@type LazySpec
 return {
 
-  -- == Examples of Adding Plugins ==
   { "catppuccin/nvim", name = "catppuccin" },
   {
     "Pocco81/auto-save.nvim",
     config = function() require("auto-save").setup {} end,
     lazy = false,
   },
+  {
+    "stevearc/oil.nvim",
+    config = function() require("oil").setup { default_file_explorer = false } end,
+    lazy = false,
+  },
 
+  -- == Examples of Adding Plugins ==
   -- "andweeb/presence.nvim",
   -- {
   --   "ray-x/lsp_signature.nvim",

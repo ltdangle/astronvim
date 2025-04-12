@@ -96,6 +96,8 @@ return {
         -- Move line
         ["<C-k>"] = { ":m-2<cr>", desc = "Move line up" },
         ["<C-j>"] = { ":m+<cr>", desc = "Move line down" },
+        -- oil.nvim mappings
+        ["-"] = { "<cmd>Oil<cr>", desc = "Oil: open current directory" },
       },
     },
   },
