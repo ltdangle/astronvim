@@ -14,8 +14,15 @@ return {
           {
             type = "php",
             request = "launch",
-            name = "Xdebug Astro",
+            name = "Astro xdebug port 9003 (web)",
             port = 9003,
+          },
+          {
+            -- run php script like this:$ php -dxdebug.client_port=9004 myscript.php
+            type = "php",
+            request = "launch",
+            name = "Astro xdebug port 9004 (cli)",
+            port = 9004,
           },
         }
       end,
