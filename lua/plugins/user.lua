@@ -18,6 +18,11 @@ return {
     config = function() require("oil").setup { default_file_explorer = false } end,
     lazy = false,
   },
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 
   -- == Examples of Adding Plugins ==
   -- "andweeb/presence.nvim",
