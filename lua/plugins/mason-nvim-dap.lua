@@ -25,6 +25,23 @@ return {
             port = 9004,
           },
         }
+
+        dap.adapters.go = {
+          type = "executable",
+          command = "node",
+          args = { "/Users/dangle/tmp/go/vscode-go/extension/dist/debugAdapter.js" },
+        }
+        dap.configurations.go = {
+          {
+            type = "go",
+            name = "Debug",
+            request = "launch",
+            showLog = false,
+            program = "${file}",
+            -- dlvToolPath = vim.fn.exepath "dlv", -- Adjust to where delve is installed
+            dlvToolPath = "/Users/dangle/go/bin/dlv",
+          },
+        }
       end,
     },
   },
