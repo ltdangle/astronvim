@@ -79,6 +79,10 @@ return {
           end,
           desc = "Go to definition in vspl",
         },
+
+        -- Dynamic workspace symbols (lsp)
+        ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Workspace symbols" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
