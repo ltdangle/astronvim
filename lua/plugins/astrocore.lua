@@ -80,8 +80,8 @@ return {
           desc = "Go to definition in vspl",
         },
 
-        -- Dynamic workspace symbols (lsp)
-        ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Workspace symbols" },
+        -- Search  workspace symbols (lsp)
+        ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Search workspace symbols" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
