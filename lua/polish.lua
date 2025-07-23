@@ -10,3 +10,10 @@ vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], {
   silent = true,
   desc = "Escape terminal mode for window commands",
 })
+
+-- Automatically enter insert mode when opening a terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function() vim.cmd "startinsert" end,
+  desc = "Start terminal in insert mode",
+})
