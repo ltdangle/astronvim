@@ -17,3 +17,13 @@ vim.api.nvim_create_autocmd("TermOpen", {
   callback = function() vim.cmd "startinsert" end,
   desc = "Start terminal in insert mode",
 })
+
+-- Use Esc to exit terminal mode
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {
+  desc = "Exit terminal mode",
+})
+
+-- Allow sending a literal Esc to the terminal by pressing it twice
+vim.keymap.set("t", "<Esc><Esc>", "<Esc>", {
+  desc = "Send literal Esc to terminal",
+})
