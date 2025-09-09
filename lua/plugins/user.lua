@@ -63,6 +63,9 @@ return {
       close_tag_on_complete = true, -- default: true
     },
   },
+  -- Laravel blade plugin
+  { "jwalton512/vim-blade" },
+
   -- == Examples of Adding Plugins ==
   -- "andweeb/presence.nvim",
   -- {
