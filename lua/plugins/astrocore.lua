@@ -85,6 +85,7 @@ return {
         ["<Leader>8"] = { "mH", desc = "Set mark H" },
         ["<Leader>9"] = { "mI", desc = "Set mark I" },
         ["<Leader>0"] = { "mJ", desc = "Set mark J" },
+        ["<Leader>dm"] = { "<cmd>delmarks A-J<cr>", desc = "Clear all number marks" },
 
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
