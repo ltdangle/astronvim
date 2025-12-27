@@ -64,6 +64,28 @@ return {
       n = {
         -- second key is the lefthand side of the map
 
+        -- Bind number keys to global marks
+        ["1"] = { "`A", desc = "Jump to mark A" },
+        ["2"] = { "`B", desc = "Jump to mark B" },
+        ["3"] = { "`C", desc = "Jump to mark C" },
+        ["4"] = { "`D", desc = "Jump to mark D" },
+        ["5"] = { "`E", desc = "Jump to mark E" },
+        ["6"] = { "`F", desc = "Jump to mark F" },
+        ["7"] = { "`G", desc = "Jump to mark G" },
+        ["8"] = { "`H", desc = "Jump to mark H" },
+        ["9"] = { "`I", desc = "Jump to mark I" },
+        ["0"] = { "`J", desc = "Jump to mark J" },
+        ["<Leader>1"] = { "mA", desc = "Set mark A" },
+        ["<Leader>2"] = { "mB", desc = "Set mark B" },
+        ["<Leader>3"] = { "mC", desc = "Set mark C" },
+        ["<Leader>4"] = { "mD", desc = "Set mark D" },
+        ["<Leader>5"] = { "mE", desc = "Set mark E" },
+        ["<Leader>6"] = { "mF", desc = "Set mark F" },
+        ["<Leader>7"] = { "mG", desc = "Set mark G" },
+        ["<Leader>8"] = { "mH", desc = "Set mark H" },
+        ["<Leader>9"] = { "mI", desc = "Set mark I" },
+        ["<Leader>0"] = { "mJ", desc = "Set mark J" },
+
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
