@@ -91,18 +91,6 @@ return {
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        -- go to definition in vspl
-        ["gD"] = {
-          function()
-            vim.cmd [[:vspl]]
-            vim.lsp.buf.definition()
-            -- below functions (switch to left window) don't work correctly
-            -- vim.cmd [[:wincmd h]]
-            -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-w>h", true, true, true), "n", true)
-          end,
-          desc = "Go to definition in vspl",
-        },
-
         -- Search  workspace symbols (lsp)
         ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Search workspace symbols" },
 
