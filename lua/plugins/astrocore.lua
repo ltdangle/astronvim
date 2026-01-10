@@ -91,6 +91,9 @@ return {
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- Show full diagnostics (trouble) in quickfix window
+        ["<leader>lt"] = { "<cmd>Trouble<CR>", desc = "Trouble" },
+
         -- Search  workspace symbols (lsp)
         ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Search workspace symbols" },
 
