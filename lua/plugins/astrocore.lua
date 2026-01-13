@@ -64,6 +64,10 @@ return {
       n = {
         -- second key is the lefthand side of the map
 
+        -- Pbcopy current file path
+        ["<leader>cp"] = { "<cmd>! echo %:p | pbcopy<CR>", desc = "Pbcopy current file path" },
+        ["<leader>cd"] = { "<cmd>! echo %:p:h | pbcopy<CR>", desc = "Pbcopy current file dir" },
+
         -- Bind number keys to global marks
         ["1"] = { "`A", desc = "Jump to mark A" },
         ["2"] = { "`B", desc = "Jump to mark B" },
