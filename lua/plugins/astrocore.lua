@@ -65,8 +65,14 @@ return {
         -- second key is the lefthand side of the map
 
         -- Pbcopy current file path
-        ["<leader>cp"] = { "<cmd>silent ! echo %:p | pbcopy<CR>", desc = "Pbcopy current file path" },
-        ["<leader>cd"] = { "<cmd>silent ! echo %:p:h | pbcopy<CR>", desc = "Pbcopy current file dir" },
+        ["<leader>cp"] = {
+          "<cmd>silent ! echo %:p | pbcopy <CR><cmd> lua vim.notify('Copied file path to clipboard')<CR>",
+          desc = "Pbcopy current file path",
+        },
+        ["<leader>cd"] = {
+          "<cmd>silent ! echo %:p:h | pbcopy<CR><cmd> lua vim.notify('Copied file dir to clipboard')<CR>",
+          desc = "Pbcopy current file dir",
+        },
 
         -- Bind number keys to global marks
         ["1"] = { "`A", desc = "Jump to mark A" },
