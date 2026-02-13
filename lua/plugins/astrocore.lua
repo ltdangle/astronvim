@@ -50,6 +50,7 @@ return {
         --  execute aliases in command line
         shell = "/bin/bash",
         shellcmdflag = "-ic",
+        scrolloff = 999,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -63,7 +64,7 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-
+        --
         -- Pbcopy current file path
         ["<leader>cp"] = {
           "<cmd>silent ! echo %:p | pbcopy <CR><cmd> lua vim.notify('Copied file path to clipboard')<CR>",
@@ -105,7 +106,19 @@ return {
         ["<leader>lt"] = { "<cmd>Trouble<CR>", desc = "Trouble" },
 
         -- Search  workspace symbols (lsp)
-        ["<leader>fd"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Search workspace symbols" },
+        ["<leader>lw"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Search workspace symbols" },
+
+        -- Telescope lsp functions and methods for easy nav
+        ["<leader>ld"] = {
+          "<cmd>Telescope lsp_document_symbols symbols<CR>",
+          desc = "Document symbols",
+        },
+
+        -- Telescope lsp functions and methods for easy nav
+        ["<leader>lm"] = {
+          '<cmd>Telescope lsp_document_symbols symbols={"function","method"}<CR>',
+          desc = "Methods and functions",
+        },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
