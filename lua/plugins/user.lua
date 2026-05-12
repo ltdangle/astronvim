@@ -72,4 +72,11 @@ return {
     opts = {},
     lazy = false,
   },
+
+  {
+    "piersolenski/wtf.nvim",
+    config = function() require("wtf").setup() end,
+    requires = { "MunifTanjim/nui.nvim" },
+    lazy = false,
+  },
 }
